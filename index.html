@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SamaXalis — L'entraide financière étudiante</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ── NAVBAR ─────────────────────────────────────── -->
+  <nav>
+    <a class="nav-logo" onclick="showPage('home')">
+      <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="28" height="28" rx="7" fill="#2d6a4f"/>
+        <path d="M8 19V13l6-5 6 5v6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M11 19v-4h6v4" stroke="#d8f3dc" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      SamaXalis
+    </a>
+    <button class="btn btn-outline" id="nav-login-btn" onclick="showPage('login')">Se connecter</button>
+  </nav>
+
+  <!-- ══════════════════════════════════════════════════
+       PAGE : ACCUEIL
+  ══════════════════════════════════════════════════ -->
+  <div id="page-home">
+
+    <section class="hero">
+      <div class="hero-badge">Déjà 5 000+ étudiants inscrits</div>
+      <h1>L'entraide financière entre <em>étudiants</em> au Sénégal.</h1>
+      <p>Une plateforme solidaire pour s'entraider en FCFA entre étudiants de l'UCAD, UGB, et autres universités avant la tombée de la bourse. Sans frais, sans intérêt.</p>
+      <div class="hero-actions">
+        <button class="btn btn-primary" onclick="showPage('register')">Créer mon compte</button>
+        <button class="btn btn-outline">Comment ça marche ?</button>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="feature-card">
+        <div class="feature-icon">%</div>
+        <div>
+          <h3>0% Intérêt</h3>
+          <p>Une entraide purement solidaire entre camarades étudiants.</p>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🛡</div>
+        <div>
+          <h3>Sécurisé par l'UCAD</h3>
+          <p>Vérification via certificat de scolarité et carte d'étudiant.</p>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">↻</div>
+        <div>
+          <h3>Remboursement flexible</h3>
+          <p>Échelonnez vos paiements selon votre calendrier de bourse.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2024 SamaXalis. Un projet solidaire.</p>
+      <div class="footer-links">
+        <a href="#">Conditions d'utilisation</a>
+        <a href="#">Confidentialité</a>
+        <a href="#">Contact</a>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- ══════════════════════════════════════════════════
+       PAGE : CONNEXION
+  ══════════════════════════════════════════════════ -->
+  <div id="page-login" class="hidden">
+    <div class="login-bg"></div>
+    <div class="login-card">
+      <div class="card-logo">SAMAXALIS</div>
+      <div class="card-sub">Accédez à votre espace étudiant</div>
+
+      <div class="field">
+        <label for="email-login">Email institutionnel</label>
+        <input type="email" id="email-login" placeholder="moussa.diop@ucad.edu.sn" />
+      </div>
+
+      <div class="field">
+        <label for="pass-login">
+          Mot de passe
+          <a href="#" class="forgot">Oublié ?</a>
+        </label>
+        <div class="pass-wrap">
+          <input type="password" id="pass-login" value="••••••••" />
+          <button class="eye-btn" onclick="togglePass('pass-login', this)" aria-label="Voir le mot de passe">
+            <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="checkbox-row">
+        <input type="checkbox" id="remember" />
+        <label for="remember">Se souvenir de moi</label>
+      </div>
+
+      <button id="login-btn" class="btn btn-primary btn-full">
+  Se connecter
+</button>
+
+      <div class="login-divider">ou</div>
+
+      <p class="login-footer-text">
+        Pas de compte ? <a href="#" onclick="showPage('register')">S'inscrire</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════
+       PAGE : INSCRIPTION
+  ══════════════════════════════════════════════════ -->
+  <div id="page-register" class="hidden">
+
+    <div class="register-form-col">
+      <div class="card-logo">SamaXalis</div>
+      <div class="card-sub">Rejoignez la plateforme financière étudiante</div>
+
+      <div class="field">
+        <label for="fullname">Prénom et Nom</label>
+        <input type="text" id="fullname" placeholder="Ex: Moussa Diop" />
+      </div>
+
+      <div class="field">
+        <label for="email-reg">Email Institutionnel</label>
+        <input type="email" id="email-reg" placeholder="nom@ucad.edu.sn ou @ugb.edu.sn" />
+      </div>
+
+      <div class="field">
+        <label for="universite">Université</label>
+        <select id="universite">
+          <option value="">Sélectionnez votre établissement</option>
+          <option>UCAD — Université Cheikh Anta Diop</option>
+          <option>UGB — Université Gaston Berger</option>
+          <option>UADB — Université Alioune Diop</option>
+          <option>UDA — Université du Sine Saloum</option>
+          <option>Autre</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="phone">Numéro Wave / Orange Money</label>
+        <div class="phone-row">
+          <span class="phone-prefix">+221</span>
+          <input type="tel" id="phone" placeholder="77 000 00 00" style="flex:1" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="pass-reg">Mot de passe</label>
+        <div class="pass-wrap">
+          <input type="password" id="pass-reg" placeholder="••••••••" />
+          <button class="eye-btn" onclick="togglePass('pass-reg', this)" aria-label="Voir le mot de passe">
+            <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <button id="register-btn" class="btn btn-primary btn-full">
+  Créer mon compte
+</button>
+
+      <p class="login-footer-text">
+        Déjà inscrit ? <a href="#" onclick="showPage('login')">Se connecter</a>
+      </p>
+    </div>
+
+    <div class="register-img-col">
+      <div class="register-img-overlay">
+        <div class="quote">
+          <h2>Rejoignez la communauté</h2>
+          <p>Plus de 50 000 étudiants utilisent déjà SamaXalis pour gérer leurs finances universitaires en toute sécurité.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ─── JS ──────────────────────────────────────────── -->
+    <script src="script.js"></script>
+</body>
+</html>
