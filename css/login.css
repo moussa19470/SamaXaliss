@@ -1,0 +1,110 @@
+/* ═══════════════════════════════════════════════
+   login.css — Page de connexion SamaXalis
+   ═══════════════════════════════════════════════ */
+
+#page-login {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  position: relative;
+  padding: 80px 16px 24px;
+}
+
+.login-bg {
+  position: fixed;
+  inset: 0;
+  background: url('https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=1400&q=80')
+              center / cover no-repeat;
+  filter: brightness(.42);
+  z-index: 0;
+}
+
+.login-card {
+  position: relative;
+  z-index: 1;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 48px 40px 40px;
+  width: 100%;
+  max-width: 440px;
+  box-shadow: var(--shadow-lg);
+}
+
+.login-card .card-logo {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--green-dark);
+  margin-bottom: 6px;
+}
+.login-card .card-sub {
+  text-align: center;
+  font-size: 13px;
+  color: var(--gray-400);
+  margin-bottom: 32px;
+}
+
+.forgot {
+  float: right;
+  font-size: 13px;
+  color: var(--green-main);
+  text-decoration: none;
+  font-weight: 500;
+}
+.forgot:hover { text-decoration: underline; }
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 22px;
+}
+.checkbox-row input[type=checkbox] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--green-main);
+  cursor: pointer;
+}
+.checkbox-row label {
+  margin: 0;
+  font-size: 13px;
+  color: var(--gray-600);
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.login-divider {
+  text-align: center;
+  color: var(--gray-400);
+  font-size: 13px;
+  margin: 22px 0;
+  position: relative;
+}
+.login-divider::before,
+.login-divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background: var(--gray-200);
+}
+.login-divider::before { left: 0; }
+.login-divider::after  { right: 0; }
+
+.card-footer-text {
+  text-align: center;
+  font-size: 13px;
+  color: var(--gray-400);
+}
+.card-footer-text a {
+  color: var(--green-main);
+  font-weight: 600;
+  text-decoration: none;
+}
+.card-footer-text a:hover { text-decoration: underline; }
+
+@media (max-width: 480px) {
+  .login-card { padding: 36px 22px 28px; }
+}
