@@ -29,6 +29,26 @@
       "password": "salla123",
       "createdAt": "2026-06-15T09:58:06.204Z",
       "id": "QPS69UxQymU"
+    },
+    {
+      "fullname": "khoudouss",
+      "email": "khoudouss@ucad.edu.sn",
+      "universite": "UCAD — Université Cheikh Anta Diop",
+      "phone": "+221 7768090745",
+      "wave_orange": "7768090745",
+      "password": "khoudouss123",
+      "createdAt": "2026-06-15T12:11:33.061Z",
+      "id": "10ldLZDDClw"
+    },
+    {
+      "fullname": "ba",
+      "email": "ba@ucad.edu.sn",
+      "universite": "UCAD — Université Cheikh Anta Diop",
+      "phone": "+221 763640650",
+      "wave_orange": "763640650",
+      "password": "123456",
+      "createdAt": "2026-06-15T12:20:13.380Z",
+      "id": "i534eEfAq6g"
     }
   ],
   "prets": [
@@ -102,6 +122,30 @@
       "avatar": null,
       "bio": "",
       "id": "6XzcI60aG-w"
+    },
+    {
+      "userId": "10ldLZDDClw",
+      "niveau": "",
+      "filiere": "",
+      "anneeAcademique": "",
+      "bourseActive": false,
+      "montantBourse": 0,
+      "scoreFiabilite": 100,
+      "avatar": null,
+      "bio": "",
+      "id": "EVkwuWO5Gs8"
+    },
+    {
+      "userId": "i534eEfAq6g",
+      "niveau": "",
+      "filiere": "",
+      "anneeAcademique": "",
+      "bourseActive": false,
+      "montantBourse": 0,
+      "scoreFiabilite": 100,
+      "avatar": null,
+      "bio": "",
+      "id": "ke3ZKg90gBY"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
