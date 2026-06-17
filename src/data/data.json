@@ -1,0 +1,64 @@
+{
+  "app": {
+    "nom": "SamaXalis",
+    "slogan": "L'entraide financière étudiante",
+    "annee": 2024,
+    "stats": {
+      "etudiantsInscrits": 5000,
+      "communaute": 50000
+    }
+  },
+
+  "universites": [
+    { "id": "ucad", "label": "UCAD — Université Cheikh Anta Diop",  "domaine": "ucad.edu.sn"  },
+    { "id": "ugb",  "label": "UGB — Université Gaston Berger",       "domaine": "ugb.edu.sn"   },
+    { "id": "uadb", "label": "UADB — Université Alioune Diop",       "domaine": "uadb.edu.sn"  },
+    { "id": "uda",  "label": "UDA — Université du Sine Saloum",      "domaine": "uda.edu.sn"   },
+    { "id": "autre","label": "Autre",                                  "domaine": null           }
+  ],
+
+  "utilisateurs": [
+    {
+      "id": 1,
+      "nom": "Moussa Diop",
+      "email": "moussa.diop@ucad.edu.sn",
+      "motDePasse": "demo1234",
+      "universite": "ucad",
+      "telephone": "771234567",
+      "role": "etudiant"
+    },
+    {
+      "id": 2,
+      "nom": "Fatou Ndiaye",
+      "email": "fatou.ndiaye@ugb.edu.sn",
+      "motDePasse": "demo5678",
+      "universite": "ugb",
+      "telephone": "782345678",
+      "role": "etudiant"
+    }
+  ],
+
+  "features": [
+    {
+      "icone": "%",
+      "titre": "0% Intérêt",
+      "description": "Une entraide purement solidaire entre camarades étudiants."
+    },
+    {
+      "icone": "🛡",
+      "titre": "Sécurisé par l'UCAD",
+      "description": "Vérification via certificat de scolarité et carte d'étudiant."
+    },
+    {
+      "icone": "↻",
+      "titre": "Remboursement flexible",
+      "description": "Échelonnez vos paiements selon votre calendrier de bourse."
+    }
+  ],
+
+  "footerLinks": [
+    { "label": "Conditions d'utilisation", "href": "#" },
+    { "label": "Confidentialité",          "href": "#" },
+    { "label": "Contact",                  "href": "#" }
+  ]
+}
